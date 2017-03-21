@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    
+  </head>
+  <body>
+<script type="text/javascript">
+var curBanner="cycle1";
+	function changeBanner() {
+	if (curBanner == "cycle2") {
+		document.images[0].src = "flags/argentina.jpg";
+		curBanner = "cycle1";
+	}
+	else {
+		document.images[0].src = "flags/australia.jpg";
+		curBanner = "cycle2";
+	}
+}
+</script>
+</head>
+<body onload="var begin=setInterval('changeBanner()',2000);">
+<p><img src="Meerkat.jpg" height="150px" width="700px" alt="Banner images" /></p>
+ 
+</body>
+</html>
+
+  </body>
+</html>

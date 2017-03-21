@@ -1,0 +1,50 @@
+
+Remember the arithmetic operators + and - have the same precedence as the string concatenation operator . (dot). Because their precedence is the same, PHP will try to interpret the expression from left to right as such:
+
+1) It will concatenate the string with the integer:
+
+
+$applesBought = 5;
+"Now I have " . $applesBought
+ 
+This produces the string "Now I have 5"
+ 
+
+2) It will subtract the integer from the string:
+
+
+$applesSold = 3;
+"Now I have 5" - $applesSold
+ 
+Here, PHP will type juggle the string and convert it to an integer.  
+Converting a string, that begins with an alphabetical character, to an integer will result in 0.  
+Therefore, it is actually subtracting 3 from 0.
+ 
+0 - 3
+ 
+This produces the integer -3
+ 
+
+
+3) It will concatenate the integer with the string:
+
+
+-3 . " apples left"
+ 
+This produces the string "-3 apples left"
+ 
+
+It is generally not a good idea to perform operations like this mixed into string concatenation, but if you insist on doing so, don't forget the parentheses!
+
+
+ 
+<?php
+$applesBought = 5;
+$applesSold = 3;
+ 
+echo "Now I have " . ($applesBought - $applesSold) . " apples left";
+ 
+// Outputs:
+// Now I have 2 apples left
+?>
+ 

@@ -1,0 +1,316 @@
+n<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    
+    <script type="text/javascript">
+	var total = new Array(10);   
+  var tot=0;
+  var valid = false;
+ 
+     
+              //document.getElementById("errormessage").innerHTML = "hi";
+   
+    function calcPremium() {
+    
+    while(!valid)
+    {
+        if(document.question1form.ownership[0].checked || document.question1form.ownership[1].checked || document.question1form.ownership[2].checked )
+          {
+                total[0] = parseInt(document.question1form.ownership.value); 
+                total[1] = parseInt(document.question2form.propertyType.value);
+                total[2] = parseInt(document.question3form.yearsOld.value);
+                if(document.question4form.houseAlarm[0].checked || document.question4form.houseAlarm[1].checked || document.question4form.houseAlarm[2].checked)
+                {
+                    total[3] = parseInt(document.question4form.houseAlarm.value);
+                    if(document.question5form.smokeDetector[0].checked || document.question5form.smokeDetector[1].checked)
+                    {
+                        total[4] = parseInt(document.question5form.smokeDetector.value);
+                        total[5] = parseInt(document.question6form.location.value);
+                        total[6] = parseInt(document.question7form.claimsFree.value);
+                        if(document.question8form.buildingsCover.value == "" || document.question8form.buildingsCover.value<0 || isNaN(document.question8form.buildingsCover.value))
+                        {
+                            document.getElementById("message").innerHTML = "Invalid entry for Buildings Cover";
+                            alert("Invalid entry for Buildings Cover");
+                            break;
+                        }
+                        else 
+                        {
+                            total[7] = parseInt(document.question8form.buildingsCover.value);
+                            total[8] = parseInt(document.question9form.contentsCover.value);
+                            if(document.question10form.claimsExcess[0].checked || document.question10form.claimsExcess[1].checked || document.question10form.claimsExcess[2].checked)
+                            {
+                                  total[9] = parseInt(document.question10form.claimsExcess.value);
+                                  for(var i=0; i<total.length; i++)
+                                  {
+                                      tot += total[i];
+                                  }
+                                
+                                  document.getElementById("final").innerHTML = "Own: €" + total[0] + 
+                                                    "\rType: €" + total[1] +
+                                                    "\rYears Old: €" + total[2] +
+                                                    "\rHouse Alarm: €" + total[3] +
+                                                    "\rSmoke Detectors: €" + total[4] +
+                                                    "\rLocation: €" + total[5] +
+                                                    "\rClaims Free: €" + total[6] +
+                                                    "\rBuildings Cover: €" + total[7] +
+                                                    "\rContents Cover: €" + total[8] +
+                                                    "\rClaims Excess: €" + total[9] +
+                                                    "\r\r\rTotal Premium Cost: €" + tot;
+                                                    
+                                  
+                                  alert(tot);
+                                  break;
+                            }
+                            else
+                            {
+                                document.getElementById("message").innerHTML = "Claims Excess radio button not checked";
+                                alert("Claims Excess radio button not checked");
+                                break;
+                            }
+                        }   
+                      }
+                    else
+                    {
+                    document.getElementById("message").innerHTML = "Smoke Alarm radio button not checked";
+                    alert("Smoke Alarm radio button not checked");
+                    break;
+                    }
+        
+                }
+                else
+                {
+                document.getElementById("message").innerHTML = "House Alarm radio button not checked";
+                alert("House Alarm radio button not checked");
+                break;
+                }  
+        
+                 
+          }
+          else
+          {
+              document.getElementById("message").innerHTML = "Ownership radio button not checked";
+              alert("Ownership stufff missing");
+              break; 
+          }  
+          
+          document.getElementById("final").innerHTML = "Unsuccessful";
+          }
+    }
+  
+    </script>
+    <style type="text/css">
+ * {
+        margin: 0;
+      }
+    html, body {
+        height: 100%;
+      }
+      
+    .page-wrap {
+      min-height: 100%;
+      /* equal to footer height */
+        margin-bottom: -142px; 
+    }
+    .header-cont {
+    width:100%;
+    position:fixed;
+    background-color: #333;
+    top:0px;
+}
+header {
+    height:50px;
+    background:#333;
+    border:1px solid red;
+    width:960px;
+    margin:0px auto;
+}
+.content {
+    width:960 px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 70px auto;
+    overflow: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;   
+}
+    .page-wrap:after {
+      content: "";
+      display: block;
+    }   
+    .site-footer, .page-wrap:after {
+      /* .push must be the same height as footer */
+        height: 142px; 
+    }
+    .site-footer {
+      background: orange;
+    }
+    
+    
+  
+        
+        
+  
+    
+    </style>
+  </head>
+  <body>
+<div class="page-wrap">
+
+
+<div class="header">
+<div class="header-cont">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+</div>
+</div>
+
+<div class="content">
+            <form name="question1form" action="" method="get">
+        Do you own the property or do you rent it from someone? <br>
+        <input type="radio" name="ownership" value="50">I own it and live in it   <br>
+        <input type="radio" name="ownership" value="25">I own it and it's a summer house   <br>
+        <input type="radio" name="ownership" value="5"> I rent it from someone <br>
+      </form>
+           <br><br>
+      <form name="question2form" action="" method="get">
+          Type of Property:
+            <select name="propertyType">
+                  <option value="100">Detatched</option>
+                  <option value="50">Semi-Detatched</option>
+                  <option value="65">Bungalow</option>
+                  <option value="40">Terraced</option>
+                  <option value="10">Apartment</option>
+            </select>
+      </form>
+                  
+                      <br><br>
+                      
+      <form name="question3form" action="" method="get">
+          Years old:
+            <select name="yearsOld">
+                  <option value="50"> Less than 1 year </option>
+                  <option value="75">Greater than 1 year and less than 5 years</option>
+                  <option value="90">Greater than 5 years and less than 15 years</option>
+                  <option value="100">Greater than 15 years</option>
+            </select>
+      </form>
+                              <br><br>
+                              
+       <form name="question4form" action="" method="get">
+            House Alarm? <br>
+            <input type="radio" name="houseAlarm" value="100">No   <br>
+            <input type="radio" name="houseAlarm" value="40">Yes - Standard Alarm   <br>
+            <input type="radio" name="houseAlarm" value="10">No - Monitored Alarm <br>
+      </form>
+      
+                                   <br><br>
+      <form name="question5form" action="" method="get">
+            At least 2 smoke detectors fitted?<br>
+            <input type="radio" name="smokeDetector" value="50">No   <br>
+            <input type="radio" name="smokeDetector" value="10">Yes <br>
+      </form>
+                                <br><br>
+                                
+      <form name="question6form" action="" method="get">
+          Location:
+            <select name="location">
+                  <option value="50">Dublin</option>
+                  <option value="30">Cork, Limerick, Kerry</option>
+                  <option value="10">West of Ireland</option>
+            </select>
+      </form>                   
+                              <br><br>
+                                   
+            <form name="question7form" action="" method="get">
+          Claims Free:
+            <select name="claimsFree">
+                  <option value="100">1 year</option>
+                  <option value="80">2 years</option>
+                  <option value="60">3 years</option>
+                  <option value="40">4 years</option>
+                  <option value="20">5+ years</option>  
+            </select>
+      </form>
+                        
+                         <br><br>
+                         
+      <form name="question8form" action="" method="get">
+            Buildings Cover:<input type="text" name="buildingsCover">
+      </form>
+                            <br><br>
+                            
+                                       
+            <form name="question9form" action="" method="get">
+          Contents Cover:
+            <select name="contentsCover">
+                  <option value="50">20,000</option>
+                  <option value="70">40,000</option>
+                  <option value="90">60,000</option>
+                  <option value="110">80,000</option>
+                  <option value="150">80,000+</option>  
+            </select>
+      </form>
+      
+                        <br><br>
+                        
+    <form name="question10form" action="" method="get">
+           Claims Excess:<br>
+            <input type="radio" name="claimsExcess" value="30">€250   <br>
+            <input type="radio" name="claimsExcess" value="50">€500 <br>
+            <input type="radio" name="claimsExcess" value="70">€1,000 <br>
+      </form>
+    
+    <form name="totalCostCheck" action="" method="get"> 
+        <input type="submit" onclick="calcPremium()">
+    </form>
+    <p id="message">          </p>
+  
+  
+     <form name="totalPrem" action="" method="get"> 
+        <textarea name="finalPremium" id="final" rows="14" cols="50"></textarea>
+    </form>
+  </div>
+  
+  
+</div>   
+
+
+
+    
+    
+    <footer class="site-footer">
+  I'm the Sticky Footer.
+</footer>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  
+  <script src="p5.min.js"></script>
+  <script>
+  function setup(){
+  createCanvas(900,900);
+   
+  
+  }
+   
+  function mouseMoved(){
+  background(0);
+  fill(255);
+  noStroke();
+  rect(mouseX, mouseY, 80,80);
+  
+  }
+  
+  
+  
+  function mouseDragged(){
+    var r = random(0,255);
+  var g = random(0,255);
+  var b = random(0,255);
+   fill(r,g,b);
+  noStroke();
+  rect(mouseX, mouseY, 80,80);
+  }
+  
+  
+  </script>
+  </head>
+  <body>
+
+  </body>
+</html>

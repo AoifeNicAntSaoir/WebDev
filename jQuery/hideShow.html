@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  <style type="text/css">
+  
+  #box {
+  width: 130px;
+  height: 130px;
+  background-color: black;
+  display: none;}
+  
+  #box1 {
+  width: 130px;
+  height: 130px;
+  background-color: black;
+  margin-left: 200px;
+  margin-top: 200px;}
+  
+    #box2 {
+  width: 130px;
+  height: 130px;
+  background-color: red;
+  position: absolute;
+  float: right;}
+  </style>
+  <script src="jquery-3.0.0.js"></script>
+  <script>
+  var i=0;
+  $(document).ready(function(){
+      $("#hide").click(function(){
+          $("p").hide(1000);
+          }); 
+          
+      $("#show").click(function(){
+          $("p").show(1000);
+          });
+          
+      $("#toggle").click(function(){
+          $("p").toggle("slow");
+          });
+          
+      $("p").mouseenter(function(){
+            alert("You entered the <p> tag");
+      });
+      
+      $("textarea").scroll(function(){
+            i++;
+            $("#scrolling").text(i);
+            
+      });
+      
+      $("#color").click(function(){
+          $("p").css("color","red");
+      });
+      
+      $("#multiStyles").dblclick(function(){
+            $("p").css({"background-color": "yellow", "font-weight": "bold", "color": "red"});
+      });
+      
+      $("#fadeIn").click(function(){
+          $("#box").fadeIn("slow","linear");
+      });
+      
+       $("#fadeOut").click(function(){
+          $("#box").fadeOut("fast","linear");
+      });
+      
+      $("#fadeToggle").click(function(){
+          $("#box").fadeToggle("fast","swing");
+      });
+      
+      $("#fadeTo").click(function(){
+          $("#box").fadeTo("fast", 0.3, "swing");
+      });
+      
+      $("#moveUp").click(function(){
+          $("#box1").slideUp(); 
+      });
+  
+      $("#moveDown").click(function(){
+          $("#box1").slideDown(); 
+      });
+      
+       $("#right").click(function(){
+          $("#box2").animate({right: "200px"}); 
+      });
+      
+      $("#left").click(function(){
+          $("#box2").animate({left: "200px"}); 
+      });
+      
+        $("#up").click(function(){
+          $("#box2").animate({bottom: "200px"}); 
+      });
+      
+        $("#down").click(function(){
+          $("#box2").animate({bottom: "-200px"}); 
+      });
+  
+      $("#goMad").click(function(){
+          $("#box2").animate({height: "300px", width: "100px"});
+           $("#box2").css("background-color", "orange");
+           $("#box2").animate({height: "700px", width: "500px"});
+           $("#box2").animate({height: "300px", width: "100px"});
+           $("#box2").css({"border": "3px solid green", "background-color": "yellow"}); 
+      });
+      
+      $("#psummary").click(function(){
+       alert("Text: " + $("#paragraph").text() +
+              "\nHTML: " + $("#paragraph").html() +
+              "\nValues: " + $("#paragraph").val() +
+               "\nAttributes: " + $("#paragraph").attr("id") );
+       
+          });
+        var text; 
+        var html;
+         
+       $("#addText").click(function(){
+        text = window.prompt("Add plain Text");
+      text +=  $("#plainText").text(text);
+       });
+  
+       $("#addHTML").click(function(){
+        html = window.prompt("Add html code");
+      text +=  $("#htmlText").html(html);
+       });
+  
+  });
+  
+  
+  </script>
+  </head>
+  <body>
+        <button id="hide">Hide Me!</button>
+        <button id="show">Show Me!</button>
+        <button id="toggle">Surprise Me!</button>
+        <button id="color">Change Colour</button>
+        <button id="multiStyles">Change few things (double click me)</button>
+        
+        <p>The quick brown fox jumps over the lazy dog</p>
+        
+        <h3 id="scrolling"></h3>      
+        
+        
+        <textarea rows="10" cols="10">The quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dog          </textarea>
+        <br><br><br><br>
+        
+        <button id="fadeIn">fadeIn </button>
+        <button id="fadeOut">fadeOut </button>
+        <button id="fadeToggle">fadeToggle </button>
+        <button id="fadeTo">fadeTo </button>
+        
+        <div id="box"></div>  
+        
+           <br><br><br><br>
+        
+        <button id="moveUp">moveUp </button>
+        <button id="moveDown">moveDown </button>       
+        
+        <div id="box1"></div> 
+        
+         <br><br><br><br>
+        
+        <button id="right">right </button>
+        <button id="left">left </button>
+        <button id="up">up </button>
+        <button id="down">down </button>
+        
+        <button id="goMad">go mad </button>
+        
+         <div id="box2"></div>
+         
+         
+         <br><br><br><br>
+         <button id="psummary">Paragraph Summary</button>
+         <p id="paragraph">My <b>paragraph</b> of different text...</p>
+         
+          <br><br><br><br>
+         <button id="addText">Add Plain Text</button>
+         <p id="plainText"></p>
+         
+         <br>
+         <button id="addHTML">Add HTML Code</button>
+         <p id="htmlText"></p>
+  </body>
+</html>

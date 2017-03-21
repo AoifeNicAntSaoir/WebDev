@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    
+  </head>
+  <body>
+  <html>
+<body>
+
+<div class="leftmenu">
+<?php include("menu.php"); ?>
+</div>
+<h1>Welcome to my home page.</h1><p>Some text.</p></body></html> 
+
+
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <script type="text/javascript">
+    var result; 
+    function addJournal(journal)
+        {
+        var journ = document.journalForm.journText.value;
+        
+        return result = journ + "\r";
+        
+        } 
+  
+     function checkPass() {
+     var password = document.confirmPassword.passwordBox.value;
+   if(document.confirmPassword.passwordBox.value!= document.confirmPassword.passwordConf.value)
+   {
+   alert("Passwords not the same");
+   document.confirmPassword.passwordBox.focus;
+   document.confirmPassword.passwordConf.value="";
+    }
+    if(password.length < 7)
+    {
+      alert("Password too short");
+      document.confirmPassword.passwordBox.focus;
+    }
+
+    }
+    
+
+    
+        
+    
+    </script>
+    <style type="text/css">
+    
+    
+    
+    </style>
+  </head>
+  <body>
+  <form name="confirmPassword" action="" method="get">
+  
+  Password <input type="password" name="passwordBox">   <br>
+  Confirm Password <input type="password" name="passwordConf" onblur="checkPass();">
+  
+  <input type="text">
+
+  
+  </form>
+  
+  <br><br><br>
+  
+  
+  <form name="journalForm" action="" method="get">
+        Journal:<input type="text" name="journText">      <br>
+        <input type="button" onclick="var newJournal = addJournal(document.journalForm.journText.value);
+                                      document.journalForm.tarea.value=document.journalForm.tarea.value + newJournal" value="Add Journal">    <br>
+        <legend>List of Names</legend>
+        <textarea name= "tarea" rows="4" cols="50"> </textarea>
+        
+  </form>
+
+  </body>
+</html>

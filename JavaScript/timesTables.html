@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+
+    <style type="text/css">         
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}               
+#add   {}
+    </style>
+        <script type="text/javascript">
+                                                                                                   
+     //var result = "";
+    function addTables()
+        {
+        var result = "";   
+        var tables = parseInt(document.tablesForm.tableNum.value);
+        result += "<table width='150px'>"
+          result += "<tr><td>Addition</td><td>Subtraction</td><td>Multiplication</td><td>Division</td><tr>"; 
+        for(var i=0; i<=12; i++){
+        result += "<tr><td>"
+        result +=  tables + " + " + i + " = " +  (tables+i)  + "\r";
+        result += "</td><td>";
+        result +=  tables + " - " + i + " = " +  (tables-i)  + "\r";
+        result += "</td><td>";
+        result +=  tables + " x " + i + " = " +  (tables*i)  + "\r";
+        result += "</td><td>";
+        result +=  tables + " / " + i + " = " +  (tables/i).toFixed(2)  + "\r";
+         result +=  "</td></tr>"
+        }
+        result += "</table>";
+        document.tablesForm.innerHTML = result;
+        return result;
+        } 
+        
+      
+   
+      var binaryResult = "";
+       var octalResult = "";
+        var hexResult = "";
+      function calcBinary(number) 
+      {
+       if(parseInt(number)<0){
+       document.getElementById("binRes").innerHTML = "Error";
+       document.getElementById("binRes").style = "background-color: red; color: white;  height: 100px; width: 500px; padding-top: 100px; text-align: center;";
+       }
+       else{
+     binaryResult = parseInt(number).toString(2);
+     octalResult = parseInt(number).toString(8);
+      hexResult = parseInt(number).toString(16).toUpperCase();
+    
+      document.getElementById("binRes").style = "background-color: yellow; height: 100px; width: 500px; padding-top: 100px; text-align: center;"
+       document.getElementById("binRes").innerHTML = number + " to binary is: " +  binaryResult + "<br>" + number + " to octal is: " + octalResult + "<br>" + number + " to hex is: " + hexResult;
+      
+      }
+      }  
+      var decimalResult = "";
+      function calcDecimal(number){
+                                                                             
+      var num = parseInt(number);
+      
+     if(!number.includes("0") || !number.includes("1") || num < 0){
+      document.getElementById("decRes").innerHTML = "invalid value - try again";
+      document.getElementById("decRes").style = "background-color: red; color: white;  height: 100px; width: 500px; padding-top: 100px; text-align: center;";
+      }
+      else{
+      decimalResult = parseInt(num,2);
+      
+      document.getElementById("decRes").innerHTML = number + " to decimal is: " + decimalResult;
+       document.getElementById("decRes").style = "background-color: yellow; color: black;  height: 100px; width: 500px; padding-top: 100px; text-align: center;";
+      }
+      }
+    </script>
+  </head>
+  <body>
+  <h1>Times Tables Generator</h1>
+  
+  <form name="tablesForm" action="" method="get">
+        Journal:<input type="text" name="tableNum">      <br>
+        <input type="button" onclick="var newAdd = addTables(document.tablesForm.tableNum.value);
+                                
+                                       calcBinary();
+                                       calcDecimal(); "
+                                      
+                                       
+                                      
+                                      value="Generate tables">    <br>
+    
+        <h1>Calculate Binary</h1>
+        Insert decimal value:<input type="text" name="binNum">      <br>
+        <input type="button" value = "Calculate Binary" onclick="var newBinary = calcBinary(document.tablesForm.binNum.value);">     
+        <p id="binRes">   </p>
+        
+    
+            <h1>Calculate Decimal</h1>
+        Insert binary value:<input type="text" name="decNum">      <br>
+        <input type="button" value = "Calculate Binary" onclick="var newDecimal = calcDecimal(document.tablesForm.decNum.value);">     
+        <p id="decRes">   </p>
+  </form>
+      
+  </body>
+</html>

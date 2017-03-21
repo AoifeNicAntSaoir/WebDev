@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <script src="p5.min.js"></script>
+    <script>
+    
+var move=0;
+function setup(){  
+  createCanvas(900, 900);
+    background(0); 
+  
+}
+
+ function  draw(){
+    var rand = 0;
+ rand = random(0,900);
+ rand1 = random(0,900);
+  rand2 = random(0,900);
+   rand3 = random(0,900);
+ 
+ rrand = random(0,255);
+ grand = random(0,255);
+ brand = random(0,255);
+ 
+ 
+  noStroke();
+   fill(rrand, grand, brand);
+   text("1",rand1, rand, 500, 500); 
+   text("0",rand2, rand3, 500, 500);  
+
+ }
+ 
+   
+
+ 
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    
+    <style type="text/css">
+    
+    
+    
+    
+    </style>
+    
+    <script type="text/javascript">
+    
+    window.alert("You have visited " + history.length + " Web pages.");
+
+     var totalPoints = 0;
+    
+    function calcPoints() {
+    var grade = document.gradetoCao.grade.value;
+    var subject = document.gradetoCao.subject.value;
+    var level = document.gradetoCao.level.value;
+    
+   
+   if(subject=="Maths" && level=="Higher")
+   {
+        switch(grade)
+        {
+          case "A1":
+          {
+            totalPoints+=125;
+          }
+        }
+   
+   
+   }
+   else
+   {
+        switch(grade)
+         {
+            case "A1":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=100;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=60;
+                }
+                break;
+            }
+            case "A2":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=90;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=50;
+                }
+                break;
+            }
+            case "B1":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=85;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=45;
+                }
+                break;
+            }
+            case "B2":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=80;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=40;
+                }
+                break;
+            }
+            case "B3":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=75;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=35;
+                }
+                break;
+            }
+            case "C1":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=70;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=30;
+                }
+                break;
+            }
+            case "C2":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=65;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=25;
+                }
+                break;
+            }
+            case "C3":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=60;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=20;
+                }
+                break;
+            }
+            case "D1":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=55;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=15;
+                }
+                break;
+            }
+            case "D2":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=50;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=10;
+                }
+                break;
+            }
+            case "D3":
+            {
+                if(level=="Higher")
+                {
+                  totalPoints+=45;
+                }
+                else if(level=="Ordinary")
+                {
+                   totalPoints+=5;
+                }
+                break;
+            }
+            default:
+            {
+               totalPoints+=0;
+            }
+         
+         }
+     }
+     
+    document.gradetoCao.caopoints.value = "Total Cao Points:" + totalPoints;
+    
+    return totalPoints;
+    }//end function
+    
+   
+    
+    
+    function isLeapYear() {
+       var year = parseInt(document.leapYear.year.value);
+       if(year%4==0)
+       {
+          alert(year + " is a leap year");
+       }
+       else
+       {
+          alert(year + " is not a leap year");
+       }
+    
+    }
+       var count = 1;
+  while(count <= 50) 
+  {
+    if(count%2==0)
+    
+      document.write(count+"<br>");
+      
+    count++;
+}
+      var resultsList = new Array(5);
+      var j;
+      
+      for(j=0; j<resultsList.length; j++)
+      {
+          resultsList[j] = parseFloat(window.prompt("Enter result for student "));
+      }
+      var totalResults = 0;
+      var highestResult = 0;
+      var smallestResult = resultsList[0];
+      for(j=0; j<resultsList.length; j++)
+      {
+            document.writeln(resultsList[j] + "<br>");
+            totalResults += parseFloat(resultsList[j]);
+            if(resultsList[j]>highestResult)
+            {
+            highestResult = resultsList[j];
+            }
+            else if(resultsList[j]<smallestResult)
+            {
+            smallestResult = resultsList[j];
+            }
+      }
+      document.writeln("Total Results: " + totalResults + 
+                        "<br> Average Results " + (totalResults/resultsList.length) + 
+                        "<br> Highest Result: " + highestResult + 
+                        "<br> Smallest Result: " + smallestResult + "<br><br>");
+      var friendsNames = new Array(5);
+      friendsNames[0] = "Aoife";
+      friendsNames[1] =  "Suki";
+      friendsNames[2] =  "Dearbhla";
+      friendsNames[3] =  "Michelle";
+      friendsNames[4] =   "Katie";
+      
+      document.writeln("First of the Array in position 0: " + friendsNames[0] + "<br>Total Length: " + friendsNames.length + "<br><br>");
+      
+      var i;
+      for(i=0; i<friendsNames.length; i++)
+      {
+      document.writeln(friendsNames[i] + "<br>");
+      }
+    
+    var score=0;
+    
+    function  Q1(optionSel)
+    {
+      if(optionSel == 'a' || optionSel == 'b' )
+      {
+        document.quiz.quizRes.value="Incorrect Answer! \nScore: " + (score-10);  
+      }
+      else if(optionSel == 'c')
+      {              
+         document.quiz.quizRes.value="Correct Answer! \nScore: " + (score+10);  
+      } 
+      return score;
+     
+    }
+    
+     function  Q2(optionSel)
+    {
+      if(optionSel == 'a' || optionSel == 'c' )
+      {
+        document.quiz.quizRes.value="Incorrect Answer! \nScore: " + (score-10);  
+      }
+      else if(optionSel == 'b')
+      {              
+         document.quiz.quizRes.value="Correct Answer! \nScore: " + (score+10);
+         alert("You're finished the quiz: " + score);
+      } 
+      return score;
+     
+    }
+    
+    
+    
+    function euroToSter()
+    { 
+      var sterling = 0.76;
+      var money = document.currencyConverter.money.value;
+      var res = parseFloat(money)*sterling;
+      var result = "€"  + res.toFixed(2);
+  
+      document.currencyConverter.convRes.value = result; 
+     
+    }
+    function sterToEuro()
+    {
+      var euro = 1.31;
+      var money = document.currencyConverter.money.value;
+      var res = parseFloat(money)*euro;
+      var result = "£"  + res.toFixed(2);
+  
+      document.currencyConverter.convRes.value = result; 
+     
+    }
+    
+    
+        function addNames(forename, surname)
+        {
+        var fname = document.listnames.forename.value;
+        var sname = document.listnames.surname.value;
+        
+        return result = fname + ", " + sname + "\r";
+        
+        }
+        
+        var guestsCost = 0;
+var limousinesCost = 0;
+var liveMusicCost = 0;
+var flowersCost = 0;
+var totalEstimate = 0;
+var liveMusic = false;
+var flowers = false;
+
+
+function calcGuests()
+{
+    totalEstimate -= guestsCost;
+    guestsCost = document.details.numGuests.value * 65;
+    totalEstimate += guestsCost;
+    document.estimate.cost.value = "$" + totalEstimate;
+}
+
+function calcLimousines() 
+{
+    totalEstimate -= limousinesCost;
+    limousinesCost = document.details.numLimousines.value * 125;
+    totalEstimate += limousinesCost;
+    document.estimate.cost.value = "€" + totalEstimate;
+}
+function addMusic() {
+    (liveMusic == false)
+    ? liveMusicCost = 500 : liveMusicCost = 0;
+    totalEstimate += liveMusicCost;
+    liveMusic = true;
+    document.estimate.cost.value = "€" + totalEstimate;
+}
+function removeMusic() {
+    (liveMusic == true)
+    ? liveMusicCost = -500 : liveMusicCost = 0;
+    totalEstimate += liveMusicCost;
+    liveMusic = false;
+    document.estimate.cost.value = "€" + totalEstimate;
+}
+
+function addFlowers() {
+    (flowers == false)
+    ? flowersCost = 400 : flowersCost = 0;
+    totalEstimate += flowersCost;
+    flowers = true;
+    document.estimate.cost.value = "€" + totalEstimate;
+}
+function removeFlowers() {
+    (flowers == true)
+    ? flowersCost = -400 : flowersCost = 0;
+    totalEstimate += flowersCost;
+    flowers = false;
+    document.estimate.cost.value = "€" + totalEstimate;
+}                      
+
+ function printStudentNames(student1, student2, student3) 
+    {
+        document.write("<p>" + student1 + "</p>");
+        document.write("<p>" + student2 + "</p>");
+        document.write("<p>" + student3 + "</p>");
+    }
+
+
+
+
+    
+    
+    
+    
+    
+    </script>
+  
+  </head>
+  <body>
+  
+  <form name="listnames" action="" method="get">
+        Forename:<input type="text" name="forename">      <br>
+        Surname:<input type="text" name="surname">        <br>
+        <input type="button" onclick="var newName = addNames(document.listnames.forename.value, document.listnames.surname.value); 
+                                      document.listnames.tarea.value=document.listnames.tarea.value + newName" value="Add Names">    <br>
+        <legend>List of Names</legend>
+        <textarea name= "tarea" rows="4" cols="50"> </textarea>
+        
+  </form>
+  
+  <form action="" name="details">
+        Guests ($65 each) <input type="text" name="numGuests" size="3" onchange="calcGuests()"/>            <br>
+        Limousines ($125 each)  <input type="text" name="numLimousines" size="3" onchange="calcLimousines()"/> <br><br>
+        
+        Live music ($500)  <br>
+        <input type="radio" name="music" onclick="addMusic()" />Yes<br>
+        <input type="radio" name="music" checked="checked" onclick="removeMusic()" />No <br><br>
+        
+        Flowers ($400)                            <br>
+        <input type="radio" name="flowers" onclick="addFlowers()" />Yes          <br>
+        <input type="radio" name="flowers" checked="checked" onclick="removeFlowers()" />No <br><br>
+  
+  </form>
+  <form action="" name="estimate">
+<p>
+    Estimated total cost:
+    <input type="text" name="cost" size="5"
+        style="border-style: none; border-color: inherit;
+        border-width: medium; background-color: Transparent" text="0" /></p>
+</form>	
+
+<form name="studentNames" method="get" action="">
+ Click to print students: <input type="radio" name="student1"  onclick="printStudentNames('Anne','Joe','Mary')"> 
+  
+  </form>   <br> <br><br>
+  
+  <form name="currencyConverter" action="" method="get">
+      Money: <input type="text" name="money">
+       <input type="radio" name="converter" onchange="euroToSter()">Euro to Sterling <br>
+       <input type="radio" name="converter" onchange="sterToEuro()">Sterling to Euro  <br>
+       
+       <textarea name= "convRes" rows="4" cols="50"> </textarea>
+  </form>
+  <br><br><br><br>
+  <form name="quiz" action="" method="get">
+      What is the plural of goose?            <br>
+            <input type="radio" name="quizOpt" onchange="Q1('a')">Gooses <br>
+            <input type="radio" name="quizOpt" onchange="Q1('b')">Goosi <br>
+            <input type="radio" name="quizOpt" onchange="Q1('c')">Geese <br>
+  
+      <br>
+          What is the square root of 16?            <br>
+            <input type="radio" name="quizOpt" onchange="Q2('a')">5 <br>
+            <input type="radio" name="quizOpt" onchange="Q2('b')">4 <br>
+            <input type="radio" name="quizOpt" onchange="Q2('c')">-4 <br>
+           
+           
+            <textarea name= "quizRes" rows="4" cols="50"> </textarea>
+  
+  </form>
+  
+  <form name="leapYear" action="" method="get">
+         <br><br><br>Enter a year: <input type="text" name="year" onchange="isLeapYear()"> <br>
+  </form>
+  
+  <form name="gradetoCao" action="" method="get">
+    <table>
+        <tr>
+           <td>  
+             <select  name="grade">
+                  <option value="A1">A1</option>
+                  <option value="A2">A2 </option>
+                  <option value="B1">B1 </option>
+                  <option value="B2">B2 </option>
+                  <option value="B3">B3 </option>
+                  <option value="C1">C1</option>
+                  <option value="C2">C2</option>
+                  <option value="C3">C3</option>
+                  <option value="D1">D1</option>
+                  <option value="D2">D2</option>
+                  <option value="D3">D3</option>
+                  <option value="fail">Less than D3</option>
+            </select>
+          </td> 
+          <td>  
+             <select  name="subject">
+                  <option value="English">English</option>
+                  <option value="Irish">Irish </option>
+                  <option value="Maths">Maths </option>
+                  <option value="HomeEc">Home Ec </option>
+                  <option value="Biology">Biology </option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="French">French</option>
+                  <option value="Engineering">Engineering</option>
+            </select>
+          </td>
+          <td>
+                <input type="radio" name="level" onclick="calcPoints()" value="Higher">Higher
+                <input type="radio" name="level" onclick="calcPoints()" value="Ordinary">Ordinary
+          </td>
+        </tr>
+        <tr>
+           <td>  
+             <select  name="grade1">
+                  <option value="A1">A1</option>
+                  <option value="A2">A2 </option>
+                  <option value="B1">B1 </option>
+                  <option value="B2">B2 </option>
+                  <option value="B3">B3 </option>
+                  <option value="C1">C1</option>
+                  <option value="C2">C2</option>
+                  <option value="C3">C3</option>
+                  <option value="D1">D1</option>
+                  <option value="D2">D2</option>
+                  <option value="D3">D3</option>
+                  <option value="fail">Less than D3</option>
+            </select>
+          </td> 
+          <td>  
+             <select  name="subject1">
+                  <option value="English">English</option>
+                  <option value="Irish">Irish </option>
+                  <option value="Maths">Maths </option>
+                  <option value="HomeEc">Home Ec </option>
+                  <option value="Biology">Biology </option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="French">French</option>
+                  <option value="Engineering">Engineering</option>
+            </select>
+          </td>
+          <td>
+                <input type="radio" name="level" onclick="calcPoints()" value="Higher">Higher
+                <input type="radio" name="level" onclick="calcPoints()" value="Ordinary">Ordinary
+          </td>
+        </tr>
+    </table>
+    
+       <textarea name= "caopoints" rows="4" cols="50"> </textarea>
+  </form>
+  
+      <img src="flags/argentina.jpg" name="companyLogo"
+	height="100" width="200" onclick="window.alert(
+'This image is located at the following URL: '
+	+ document.companyLogo.src);"
+	alt="Image of a company logo." />
+  <br><br><br><br>
+  <a href="redsox.html"
+	onmouseover="this.style.textDecoration='underline';"
+	onmouseout="this.style.textDecoration='none';">
+	Red Sox Fan Club</a>
+  
+<p><img src="flags/choose.jpg" height="90px" width="700px"
+alt="Banner images" onmouseover="this.src='flags/australia.jpg'"
+onmouseout="this.src='flags/choose.jpg'" /></p>
+
+ <p><img src="" height="90px" width="700px"
+alt="Hover for Aus" onmouseover="this.src='flags/australia.jpg'"
+onmouseout="this.src=''" /></p>
+
+<p><a href=http://www.wikipedia.org/ target="wikiWindow">
+Wikipedia home page</a>
+
+<a href="#" onmouseout = 'this.src='flags/choose.jpg'>Australia</a>
+      <img src='' height="90px" width="700px">
+
+
+
+  </body>
+</html>

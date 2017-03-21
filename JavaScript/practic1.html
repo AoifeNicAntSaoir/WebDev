@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  <!--CSS Styles!-->
+  <style type="text/css">
+  #demo
+  {
+  font-weight: italic;
+  }
+  
+  #werror:focus
+  {
+  background-color: red;
+  }
+  </style>
+  
+  <script type="text/javascript">
+  
+  
+    function calcPay(hours,pay)
+    {
+    var finalPay;
+    if(hours>60)
+    {
+     return 500;
+    }
+    
+    var res= hours*pay;
+    document.calculatePay.calcpayerror.value = "res";
+    }
+    
+    
+
+     
+    function calcBMI()
+    {
+         var weight = document.calculateBMI.weight.value;
+         var height = document.calculateBMI.height.value;
+          parseFloat(weight);
+          parseFloat(height);
+          if(weight == "" || weight <=0 || height == "" || height <= 0)
+          {
+          document.getElementById("werror").focus();
+          document.getElementById("herror").focus();
+          document.getElementById("error").innerHTML = "Error with weight / height";
+          alert("error");
+          }
+          else
+          {
+          var result = (weight * 702) / (height * height);
+          document.getElementById("error").innerHTML = "Your BMI is " + result.toFixed(2);
+          alert(result.toFixed(2));
+          }  
+         
+      
+    }
+      
+     function dec2bin() {
+          var x = document.getElementById("deci").value;
+          
+          if (isNaN(x)== true || x == "") {
+                alert ("You must enter an integer decimal number!");
+                document.getElementById("deci").value = "";
+                document.getElementById("deci").focus();
+              }
+              
+        x = parseInt(x);
+        var bin = x.toString(2);
+        var hex = x.toString(16).toUpperCase();
+        var octal = x.toString(8);
+
+        var figs = "The binary representation of " + x + " is " + bin + "<br>";
+        figs = figs + "The hexadecimal representation of " + x + " is " + hex + "<br>";
+        figs = figs + "The octal representation of " + x + " is " + octal + "<br>";
+
+        document.getElementById("result").innerHTML = figs;
+      }
+      
+      
+    function add(){
+    var num1 = parseFloat(document.calcForm.num1.value);
+    var num2 = parseFloat(document.calcForm.num2.value);
+    if(isNaN(num1)==true || isNaN(num2)==true)
+        {
+          window.alert("Entry Invalid");
+        }
+    else
+        {
+          var result = num1 + "+" + num2 + "="  + (num1+num2);
+          //alert(result);
+          document.getElementById("calcResult").innerHTML = result;
+        }
+    }
+    
+    function subtract(){
+    var num1 = parseFloat(document.calcForm.num1.value);
+    var num2 = parseFloat(document.calcForm.num2.value);
+    if(isNaN(num1)==true || isNaN(num2)==true)
+        {
+          window.alert("Entry Invalid");
+          document.getElementById("no1").focus();
+        }
+    else
+        {
+        var result = num1 + "-" + num2 + "="  + (num1-num2);
+        //alert(result);
+        document.getElementById("calcResult").innerHTML = result;
+        }
+    }
+    
+    function multiply(){
+    var num1 = parseFloat(document.calcForm.num1.value);
+    var num2 = parseFloat(document.calcForm.num2.value);
+    if(isNaN(num1)==true || isNaN(num2)==true)
+        {
+          window.alert("Entry Invalid");
+        }
+    else
+        {
+        var result = num1 + "x" + num2 + "="  + (num1*num2);
+        //alert(result);
+        document.getElementById("calcResult").innerHTML = result;
+        }
+    }
+    
+    function divide(){
+    var num1 = parseFloat(document.calcForm.num1.value);
+    var num2 = parseFloat(document.calcForm.num2.value);
+    if(isNaN(num1)==true || isNaN(num2)==true)
+        {
+          window.alert("Entry Invalid");
+        }
+    else
+        {
+        var result = num1 + "/" + num2 + "="  + (num1/num2);
+        //alert(result);
+        document.getElementById("calcResult").innerHTML = result;
+        }
+    }
+    
+    function modulus(){
+    var num1 = parseFloat(document.calcForm.num1.value);
+    var num2 = parseFloat(document.calcForm.num2.value);
+    if(isNaN(num1)==true || isNaN(num2)==true)
+        {
+          window.alert("Entry Invalid");
+        }
+    else {
+          var result = num1 + "%" + num2 + "="  + (num1%num2);
+          //alert(result);
+          document.getElementById("calcResult").innerHTML = result;
+         }
+    }
+    
+    
+  
+     function convertToFahr(){
+     var celcius = parseFloat(document.tempConvForm.celcTxt.value);
+     if(isNaN(celcius)==true)
+        {
+          window.alert("Entry Invalid");
+        }
+     else
+        {
+          var result =  celcius.toFixed(2) +  " \u00B0" + "C being converted to Fahrenheit... \n\n" +(celcius * (9/5) + 32).toFixed(2) + "\u00B0F";
+          window.alert(result);
+        }
+    }
+    
+    function convertToCelc(){
+    var fahrenheight = parseFloat(document.tempConvForm.fahrTxt.value);
+    if(isNaN(fahrenheight)==true)
+        {
+          window.alert("Entry Invalid");
+        }
+     else
+        {
+        var result =  fahrenheight.toFixed(2) + " \u00B0" + "F being converted to Celcius... \n\n" +  ((fahrenheight-32) * 5/9).toFixed(2) + "\u00B0C";
+        //window.alert(result);
+        document.getElementById("calcResult").innerHTML = "you clicked me " + result;
+        }
+    //document.getElementById("celcRes").innerHTML = "hi";
+    }
+    var opt1 = "kdjkladjlkdajakdl";
+  var opt2 = "kdjflakjdklafjkladhfh";
+  var opt3 = "kljdafklj dkajfklaj kjdflkjalk";
+  
+  var veggie =  "The pizza is topped with juicy veg";
+  var meaty = "The pizza is topped with ham other succulent meats";
+  var pepper = "The pizza is topped with pepperoni and cheese";
+  var hawaii = "The pizza is topped with ham and pineapple";
+  
+  
+  
+      document.writeln("<h1 style='color: red; text-align: center;'>Hello World</h1>");
+      document.write("hello wwagon");
+      document.write("<br>hello wwagon");
+      
+      document.writeln("<br>5+6="+(5+6));
+      document.writeln("<br>5-6="+(5-6));
+      document.writeln("<br>5*6="+(5*6));
+      document.writeln("<br>5/6="+(5/6).toFixed(2));
+      document.writeln("<br>5%2="+(5%6));
+      
+     //var nameEntered = window.prompt("Enter your name:");
+     //document.writeln(nameEntered);
+     //window.alert(typeof nameEntered);
+     
+     var i=0;
+     while(i<10) 
+     {
+     document.writeln(i + "<br>");
+     i++;
+     }
+     
+     var i=10;
+     while(i>=0)
+     {
+     document.writeln(i + "<br>");
+     i--;
+     }
+     
+     document.writeln("<h1 style='text-align: center;'> This is my heading</h1>")
+     document.writeln("health advice goes here");
+     document.writeln("<ul>" +
+                            "<li>Drink 2L of water a day</li>" +
+                            "<li>Follow the food pyramid</li>" +
+                            "<li>Cut down on sugar and salt</li>" +
+                            "<li>Eat plenty fruit and veg</li>" +
+                            "<li>Eat food with good source of fibre</li>" + 
+                        "</ul>");
+                        
+  var myMessage = "Helloooooooo thank you for clicking. Come again soon";                      
+  function myFunction() {
+  document.getElementById("demo").innerHTML = "you clicked me " + myMessage;
+  
+  
+  }
+  
+
+  
+  
+  </script>
+  </head>
+  <body>
+    
+        <input type="button" name="ClickButton" value="Click me" onclick="myFunction()">
+        <p id="demo"></p>
+        
+        <form name="pizzaForm" action = "" method = "GET">        
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=veggie">Vegetarian Pizza    <br>
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=meaty">Meat Pizza         <br>
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=pepper">Pepperoni Pizza     <br>
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=hawaii" >Hawaiian Pizza      <br>          
+        
+            <textarea id="descriparea" name="mytextarea" rows="4" cols="50">
+                <!--Shit goes here!-->
+            </textarea>
+        </form>
+        
+        <form name="flagForm" action="" method="get">
+        <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/argentina.jpg'" >  Argentina   <br>
+         <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/australia.jpg'" >  Australia   <br>
+          <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/bolivia.jpg'" >  Bolivia   <br>
+           <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/cuba.jpg'" >  Cuba   <br>
+            <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/finland.jpg'" >  Finland   <br>
+             <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/france.jpg'" >  France   <br>
+              <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/italy.jpg'" >  Italy   <br>
+               <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/peru.jpg'" >  Peru   <br>
+                <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/syria.jpg'" >  Syria   <br>
+                 <input type="radio" name="flagRad" name="flag" onclick="document.flagForm.flagid.src= 'flags/tunisia.jpg'" >  Tunisia   <br>
+        
+        
+        <br><br><img src="flags/choose.jpg" alt="flag here" name="flagImg" id="flagid"> 
+        
+        </form>
+        
+        
+         <br><br>This isn't working
+        <form name="newsForm" action="" method = "get">
+            <select>
+                <option name="opti1" onchange="document.newsForm.tarea.value='opt'">News Item 1</option>
+                <option name="opti2" onchange="document.newsForm.tarea.value=opt2">News Item 2</option>
+            
+            </select>
+        
+            <br><textarea name="tarea" id="tareaid">      </textarea>
+        </form>
+        
+        
+        <form name="tempConvForm" action="" method="get">
+           <br>
+           <br>
+           <br>
+            Celcius <input type="text" name="celcTxt" placeholder = "Celcius"> <br><br>
+            <input type="submit" value="Convert to Fahrenheight" onclick="convertToFahr()">
+            
+           <br><br><br><br> Fahrenheit <input type="text" name="fahrTxt" placeholder = "Fahrenheight">    <br><br>
+           <input type="submit" value="Convert to Celcius" onclick="convertToCelc()"> 
+           <p id="celcRes">      </p>         
+        </form>
+        
+        
+        <form name="calcForm" action="" method="get">
+              Number 1:<input type="text" name="num1" id="no1" placeholder="Number 1 goes here"> <br>
+              Number 2:<input type="text" name="num2" id="no2" placeholder="Number 2 goes here">
+               <br><br>
+              <input type="button" name="plusbtn" value="+" onclick="add()">
+              <input type="button" name="subtractbtn" value="-" onclick="subtract()" >
+              <input type="button" name="multiplybtn" value="x" onclick="multiply()">
+              <input type="button" name="dividebtn" value="/" onclick="divide()"> 
+              <input type="button" name="modulusbtn" value="%" onclick="modulus()">
+              
+               <br><textarea id="calcResult" name="mytextarea" rows="4" cols="20">    </textarea>
+             <button type="reset" value="Reset">Reset</button> 
+        </form>
+        
+        <form name="bincalcForm" action="" method="get">
+            Insert Decimal Number:<input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" />
+            <input type="button" value="Convert!" onclick="dec2bin()" />
+            <br><br>
+            <div id = "result"></div>
+        </form>
+    
+        <form name="calculateBMI" action="" method="get">
+              Weight:  <input type="text" name="weight" id="werror" placeholder="Weight (pounds)">  <br>
+              Height:  <input type="text" name="height" id="herror" placeholder="Height (inches)">  <br>
+              <p id="error">      </p>
+              <input type="submit" name="calculBMI" onclick="calcBMI()">
+        </form>                
+        
+        
+        <!--passing up value into parameters!-->      
+        <form name="calculatePay" action="" method="get">
+              Hours Worked:  <input type="text" name="hours" id="hoursid" placeholder="Hours">  <br>
+              Minimum Wage:  <input type="text" name="pay" id="wageid" placeholder="Wage €">  <br>
+              <input type="text" name="calcpayerror"> 
+              <input type="submit" name="calculBMI" onclick="calcPay(parseInt(document.calculatePay.hours.value),parseInt(document.calculatePay.pay.value))">
+        </form>
+        
+        <br><br><br>
+        
+  
+  </body>
+</html>

@@ -1,0 +1,322 @@
+ <!DOCTYPE html>                                                         
+<html lang='en'>
+  <head>
+    <title>Portfolio Aoife Sayers</title>
+    <meta charset='utf-8'>
+    <meta name='description' content='Portfolio website of a Computing with  Multimedia student'>
+    <meta name='keywords' content='computing, multimedia, computing with multimedia computer science, cs, portfolio, aoife, sayers, personal website itt, it tralee, institute of technology tralee, programming, java, c#, web development, responsive, mobile, web design, html5, css3, php, javascript, 2d animation, adobe'>
+    <meta name='author' content='Aoife Sayers'>
+    <meta name='robots' content='all'>
+    <meta name="viewport" content="width=device-width" />
+    
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>   
+  <script src="jquery-3.0.0.js"></script>
+  <script type="text/javascript">
+         var myVar;
+     		    
+		     var i = 0;
+          
+          function timer()    {          
+            var headerText = ["Portfolio of Aoife Sayers","Bsc Computing with Multimedia","Programming","Web Development","Multimedia","Design"];
+            var length = headerText.length;   
+            
+            document.getElementById("text").innerHTML = "<p class='changingText'> " + headerText[i] + "</p>"; 
+            $(document).ready(function(){
+                 $("#text").fadeIn("linear",5000) .fadeOut("linear",5000);
+                
+                  });
+                
+            if(i==(length-1)){
+              i=0;
+            }
+            else {
+            i++;
+            }
+          }
+          
+          function mobileOpen() {
+          window.open("index.html", "Home", "width=375,height=677");
+          alert("iPhone 6 screen dimensions in portrait")
+          }
+          
+          function tabletOpen() {
+          window.open("index.html", "Home", "width=768,height=1024");
+          alert("iPad screen dimensions in portrait");
+          }
+        
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";                                                 
+          document.getElementById("myDiv").style.display = "block";
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    
+       
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+   <body onload="myFunction(); var newtimer = setInterval('timer()',3000);" style="margin:0;">
+<div class="page-wrap">
+
+
+<div class="header">
+<div class="header-cont">
+<a href="index.html"><img src="images/flatdesg.png" alt="logo" height="35" width="145" style="margin-left: 75px; margin-top: 8px; position: absolute;"></a>
+<ul style="margin-left: 36%;">
+  <li><a class="fullMenu" href="#Home"> Home</a></li>
+  <li><a href="#About" class="fullMenu">About</a></li>
+  <li class="dropdown">
+    <a href="#Portfolio" class="fullMenu">Portfolio</a>
+    <div class="dropdown-content">
+      <a href="#Programming">Programming</a>
+      <a href="#WebDev">Web Development</a>
+      <a href="#Design">Design</a>
+      <a href="#">Networking</a>
+    </div>
+  </li>
+  <li><a class="fullMenu" href="#Contact">Contact</a></li>
+</ul>
+
+
+</div>
+<ul>
+ <li>
+  <a class="menuButton" onclick="openNav()" href="#">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div></a>
+</li>
+</ul> 
+<div id="mySidenav" class="sidenav" style="width: 250px;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a style="margin-top: 15%;" onclick="closeNav()" class="sideHighlight" href="#Home">Home</a>
+  <a href="#About" class="sideHighlight" onclick="closeNav()">About</a>
+  <a href="#Portfolio" class="sideHighlight" onclick="closeNav()">Portfolio</a>
+  <a href="#Programming" class="sideNavSub" onclick="closeNav()">Programming</a>
+  <a href="#WebDev" class="sideNavSub" onclick="closeNav()">Web Development</a>
+  <a href="#Design" class="sideNavSub" onclick="closeNav()">Design</a>
+  <a href="#Contact" class="sideHighlight" onclick="closeNav()">Contact</a>
+</div>
+
+                                                             
+</div> 
+
+
+
+<div id="loader"></div>
+
+<div id="myDiv" class="animate-bottom">
+
+<div id="Home"><!--Main Body here!-->
+      <div class="welcome"> 
+          <div class="transparentBox"> 
+          <h1 style="color: #ccc; padding-top: 130px;">Hello World!</h1>
+          <div id="text"> </div>
+          </div>
+      </div>
+      
+     
+      <div class="welcome1">
+         <h2 style="color: #333; padding-top: 130px;"> Welcome to my portfolio</h2>
+         <p style="text-align: center;">BSc in Computing with Multimedia</p>
+         <div class="skillsWrap">
+         <div class="skillsBox">
+           <p><strong>Programming</strong></p>
+           <img style="margin-top: 15px;" src="images/programming.svg" alt="programming"> 
+          <p> Experience in object oriented Java & visual basic C#.</p>
+        </div>
+        
+        <div class="skillsBox">
+          <p><strong>Web Development</strong></p>
+          <img style="margin-top: 15px;" src="images/code.svg" alt="code">
+          <p>Web Development & Design using HTML5, CSS3, JavaScript, jQuery & PHP targeting a range of different devices and screen sizes</p>
+        </div> 
+        <div class="skillsBox">
+          <p><strong>Design & Multimedia Creation</strong></p>
+          <img style="margin-top: 15px;" src="images/design.svg" alt="design">
+          <p>Designing digital imaging & interfaces, 2D animation using the Adobe Creative Suite - Photoshop, Illustrator & After Effects. Creating digital content for the web</p>
+        </div>
+        <div class="skillsBox">
+          <p><strong>Database Administration</strong></p>
+        <img style="margin-top: 15px;" src="images/database.svg" alt="databases">
+        </div>
+        <div class="skillsBox">
+            <p><strong>Networking Administration</strong></p>  
+             <img style="margin-top: 15px;" src="images/networking.svg" alt="networking">
+        </div>
+        </div>
+          
+      </div>
+</div>
+
+
+<div id="About">      
+      <div class="aboutBox">
+        <h1 style="padding-top: 130px;">About</h1>
+          <div class="code">
+          <pre>
+          <code>
+            <p class="codeHighlight"> &lt;about> </p>
+                <p style="text-indent: 50px;"><span class="codeHighlight"> &lt;name></span> Aoife Sayers <span class="codeHighlight">&lt;/name></span> </p>
+                 <p  style="text-indent: 50px;"><span class="codeHighlight">&lt;course></span> <a href="http://www.ittralee.ie/en/InformationAbout/Courses/SchoolofBusinessComputingandHumanities/Computing/TL812-BScHonsinComputingMediaDevelopment/">Bsc. Computing with Multimedia</a> <span class="codeHighlight">&lt;/course></span></p>
+                 <p  style="text-indent: 50px;"><span class="codeHighlight">&lt;college></span> <a href="http://www.ittralee.ie/en/">Institute of Technology, Tralee</a> <span class="codeHighlight">&lt;/college></span></p>
+                 <p  style="text-indent: 50px;"><span class="codeHighlight">&lt;location></span> <a href="https://goo.gl/maps/XEfh1KyDWk62">Co. Kerry, Ireland</a><span class="codeHighlight"> &lt;/location></span></p>
+                 <p style="text-indent: 50px;"><span class="codeHighlight">&lt;email></span> <a href="mailto:aoifesayers@gmail.com">aoifesayers@gmail.com</a> <span class="codeHighlight">&lt;/email></span></p>
+            <p style="padding-bottom: 5%;" class="codeHighlight">&lt;/about></p>
+          </code>
+          </pre>
+          </div>
+        
+      </div>
+</div>
+      
+      
+     
+    
+<div id="Portfolio">   
+    <div class="portfolioMain">  
+          <h1 style="color: #ccc; padding-top: 130px;">Portfolio</h1>
+      </div>
+  
+<div id="Programming">      
+      <div class="portfolio">  
+          <h3>Programming</h3>
+      </div>
+ 
+      
+      <div class="portfolio1" style="padding-bottom: 70px; "> 
+            <h2 style="padding-top: 70px; ">Java</h2>
+             
+              <img alt="java quiz" src="images/java.png" onmouseover="this.src='images/javamo.png'; this.style.boxShadow = '5px 8px 8px #ccc';" onmouseout="this.src='images/java.png'; this.style.boxShadow = '0px 0px 0px blue';"  width="40%" style="margin-top: 20px; margin-left: 30%;"> 
+              <br><p class="moduleP ">GUI based Java quiz on a grid layout. JMenu & JMenu items capable of persistent storage using FileInputStream & FileOutputStreams </p>
+              <a href="javaquiz.jar" download><button style="margin-left: 47%; margin-top: 20px;" class="responsiveButtons">Download Java Quiz .jar</button></a>
+              <p class="tagAlign"><span class="tags">Java</span></p>
+        
+
+      </div>  
+ </div> 
+<div id="WebDev">      
+        <div class="portfolio">  
+          <h3>Web Development</h3>
+      </div>
+      
+      
+      <div class="portfolio1" style="padding-bottom: 80px;"> 
+          <h2 style="color: #333; padding-top: 80px; ">HTML5 & CSS3</h2>
+              <img alt="responsive" src="images/responsive.png" onmouseover="this.src='images/responsivemo.png'; this.style.boxShadow = '5px 8px 8px #ccc';"" onmouseout="this.src='images/responsive.png'; this.style.boxShadow = '0px 0px 0px #ccc';"  width="55%" style="margin-top: 30px; margin-left: 22%;"> 
+              <p class="moduleP ">Responsive Web Design</p>    
+              <div class="responsiveView">
+              <br><p class="moduleP ">Click to view responsive versions of this page </p> 
+              <button style="margin-left: 34%; margin-top: 20px;" class="responsiveButtons"  onclick="mobileOpen();">Mobile </button>
+              <button class="responsiveButtons" onclick="tabletOpen();">Tablet</button> 
+              </div> 
+              <p class="tagAlign"><span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">JavaScript</span> <span class="tags">jQuery</span></p>
+              
+              
+          <h2 style="color: #333; padding-top: 80px;">JavaScript</h2>
+              <img alt="javascript" src="images/javascript.png" onmouseover="this.src='images/javascriptmo.png'; this.style.boxShadow = '5px 8px 8px #ccc';"" onmouseout="this.src='images/javascript.png'; this.style.boxShadow = '0px 0px 0px #ccc';" onclick="location.href='insurancePremiumCalculator.html'"  width="55%" style="margin-top: 30px; margin-left: 22%;" />
+              <p class="moduleP">A HTML form that validates & calculates an insurance premium using Javascript</p>
+              <div class="tagAlign"> <span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">JavaScript</span> </div>
+          
+          <h2 style="color: #333; padding-top: 80px;">PHP</h2>
+              <img alt="php" src="images/php.png" onmouseover="this.src='images/phpmo.png'; this.style.boxShadow = '5px 8px 8px #ccc';"" onmouseout="this.src='images/php.png'; this.style.boxShadow = '0px 0px 0px #ccc';" onclick="location.href='php/index.html'"  width="55%" style="margin-top: 30px; margin-left: 22%;" />
+               <p class="moduleP ">A database driven bookshop website using PHP & MySQL</p>
+                <p class="tagAlign"><span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">PHP</span> <span class="tags">MySQL</span></p>
+      </div>
+</div>
+<div id="Design">
+      <div class="portfolio">  
+          <h3>Design & Media</h3>
+      </div>
+        <div class="portfolio1">
+          <h2 style="color: #333; padding-top: 80px;">Digital Imaging & Digital Interfaces</h2>
+              <img  alt="digital imaging" src="images/digiImg.png"  width="55%" style="margin-top: 30px; margin-left: 22%;">
+              <p class="moduleP ">Design for images and interfaces for screen media using Adobe Photoshop</p>
+              <p class="tagAlign"><span class="tags">PSD</span> <span class="tags">Photoshop</span> <span class="tags">UI</span></p>
+          
+          <h2 style="color: #333; padding-top: 80px;">Design for Mobile Devices</h2>
+             <img alt="illustrator" src="images/illustrator.png" onclick="location.href='https://invis.io/RE78603SA'; target='_blank';"  onmouseover="this.src='images/desmobmo.png'; this.style.boxShadow = '5px 8px 8px #ccc';"" onmouseout="this.src='images/illustrator.png'; this.style.boxShadow = '0px 0px 0px #ccc';"  width="55%" style="margin-top: 30px; margin-left: 22%;">
+              <p class="moduleP ">Vector graphics & user centred design specifically for mobile devices using Adobe Illustrator</p>
+              <p class="tagAlign"><span class="tags">AI</span> <span class="tags">Illustrator</span> <span class="tags">Invision</span></p>
+          
+          <h2 style="color: #333; padding-top: 80px;">2D Animation</h2>
+              <img src="images/afterEffects.png" alt="after effects"  width="55%" style="margin-top: 30px; margin-left: 22%;">
+              <p class="moduleP ">Short 2D animation clip using basic shapes & text on Adobe Effects</p>
+              <p class="tagAlign"><span class="tags">AE</span> <span class="tags">After Effects</span> <span class="tags">Photoshop</span></p>                                             
+          <h2 style="color: #333; padding-top: 80px;">Media Production</h2>
+               <img src="images/medProd.png" alt="media production" width="55%" style="margin-top: 30px; margin-left: 22%;">
+              <p class="moduleP ">Basic audio & video production & editing using Final Cut Pro & Pro Tools on MAC</p>
+              <p class="tagAlign"><span class="tags">Final Cut Pro</span> <span class="tags">Pro Tools</span></p>
+      </div>
+</div>
+</div>
+      
+           
+
+
+<div id="Contact">
+    <div class="box3">
+        <h1 style="padding-top: 130px;">Contact</h1>
+            <div class="iconGroup" style="margin-left: 40%; margin-top: 50px;">
+              <a href="mailto:aoifesayers@gmail.com" target="_blank"> <img src="images/email.svg" alt="email icon"  height="80"></a>
+              <a href="https://github.com/iiiAoife" target="_blank"><img src="images/github-logo.svg" alt="github icon" height="80"></a>
+              <a href="https://www.linkedin.com/in/aoife-sayers-108a55a5?trk=hp-identity-name" target="_blank"><img  src="images/linkedin.svg" alt="linked in icon" height="80" width="80"></a>
+            </div>
+      </div>
+      
+      <div class="box3content">
+        <h2 style="color: #333; padding-top: 130px; "> Comments, Critiques or Questions?</h2>
+            <form name="feedbackform" action="feedback.php" method="post" class="form1">
+              <table width="50%">
+                <tr><td>Name:*</td><td> <input type="text" name="name" style="border-radius: 5px; border: 2px solid #068894;  padding: 5px 5px;" placeholder="Joe Soap" maxlength="30" required></td></tr>
+                <tr><td>Email:*</td><td><input type="email" name="email" style="border-radius: 5px; border: 2px solid #068894;  padding: 5px 5px;" placeholder="jsoap@example.com" maxlength="30" required></td></tr> 
+                <tr><td>Comment*</td> <td><textarea name="comment" style="border-radius: 5px; border: 2px solid #068894;  padding: 5px 5px;" placeholder="What... Why... How..." maxlength="50" rows="3" required cols="20"></textarea></td></tr>
+                <tr><td colspan="2"> <input type="submit" name="submitButton" class="responsiveButtons" style="margin-left: 35%;" value="Submit"></td></tr>
+                </table>
+            </form>
+      </div>  
+      
+      
+        
+        
+ 
+      </div>  
+  
+       
+
+   
+</div>  
+</div> 
+
+
+
+    
+    
+<footer  class="site-footer">
+<p style="color: #ccc; text-align: center;">Aoife Sayers 2016          </p> <br>
+
+<br>
+<div class="iconGroup" style="padding-left: 45%;">
+<a class="iconGroup" href="mailto:aoifesayers@gmail.com" target="_blank"> <img src="images/email.svg" alt="email icon"  height="40"></a>
+<a class="iconGroup" href="https://github.com/iiiAoife" target="_blank"><img src="images/github-logo.svg" alt="github icon" height="40"></a>
+<a class="iconGroup" href="https://www.linkedin.com/in/aoife-sayers-108a55a5?trk=hp-identity-name" target="_blank"><img  src="images/linkedin.svg" alt="linked in icon" height="40" width="40"></a>
+</div>
+</footer>
+    
+    
+
+  </body>
+</html>

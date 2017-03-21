@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  
+  <style type="text/css">
+  @-webkit-keyframes swing {
+      from {
+      transform: rotate(3deg);
+      }
+      20% {
+      transform: rotate(7deg);
+      }
+      60% {
+      transform: rotate(10deg);
+      }
+      80% {
+      transform: rotate(7deg);
+      }	
+      to {
+      transform: rotate(3deg);
+      }
+  }
+  
+  #quiz .unSung a:nth-child(odd) img {
+  transform: rotate(3deg);
+  animation: swing 0.1s 5 ease-in;
+  }
+  #quiz .unSung a:nth-child(even) img {
+  transform: rotate(-3deg);
+  animation: swing 0.1s 5 0.3s ease-in;
+  }
+  #quiz .overHyped a:nth-child(odd) img {
+  transform: rotate(3deg);
+  animation: swing 0.1s 5 0.2s ease-in;
+  }
+  #quiz .overHyped a:nth-child(even) img {
+  transform: rotate(-3deg);
+  animation: swing 0.1s 5 0.5s ease-in;
+  }
+  
+   #quiz .unSung a:nth-child(even) img:hover {
+  transform: rotate(150deg);
+  animation: swing 0.1s 5 ease-in;
+  }
+  
+  #quiz .overHyped a:nth-child(even) img:hover {
+  transform: rotate(3deg);
+  animation: swing 0.1s 5 ease-in;
+  }  
+
+  
+  
+  
+  </style>
+    
+  </head>
+  <body id="quiz">
+   <aside>
+    <div role="complementary">
+      <div class="sideBlock unSung">
+        <h1>Unsung heroes...</h1>
+        <a href="#"><img src="img/midnightRun.jpg"
+        alt="Midnight Run" /></a>
+        <a href="#"><img src="img/wyattEarp.jpg"
+        alt="Wyatt Earp" /></a>
+      </div>
+    </div>
+    <div role="complementary">
+      <div class="sideBlock overHyped">
+        <h1>Overhyped nonsense...</h1>
+        <a href="#"><img src="img/moulinRouge.jpg"
+        alt="Moulin Rouge" /></a>
+        <a href="#"><img src="img/kingKong.jpg"
+        alt="King Kong" /></a>
+      </div>
+    </div>
+    </aside>
+   </body>
+
+</html>

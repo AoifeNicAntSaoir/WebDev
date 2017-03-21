@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'
+  <head>
+    <title>Aoife Sayers - Canvas Part 3</title>
+    <meta charset='utf-8'>
+  
+  <script>
+  
+  var canvas;
+  var canvasContext;
+  var ballX = 50;
+  var ballY = 600/2;
+  var ballSpeedX = 5;
+  var ballSpeedY = 5;
+  
+  
+  window.onload = function(){
+  var framesPerSecond = 30;
+  canvas = document.getElementById("gameCanvas");
+  canvasContext = canvas.getContext("2d");
+  setInterval(function(){
+    move(); 
+    draw();
+  },1000/framesPerSecond);
+  
+  
+  }
+  
+  
+  function draw(){
+
+    //Set up canvas background
+    drawRectangle(0, 0, canvas.width, canvas.height, "black");
+    
+    //Ball setup
+    drawBall(ballX, ballY, 40, 'orange');
+    
+                 
+ 
+ 
+  }
+  function move(){
+      ballX = ballX + ballSpeedX;
+       ballY = ballY + ballSpeedY;
+      
+      if(ballX < 0 ){
+            ballSpeedX = -ballSpeedX;
+             
+        }
+         if(ballX > canvas.width){
+              ballSpeedX = -ballSpeedX;
+             
+        }  
+            
+        if(ballY < 0 ){ 
+            ballSpeedY = -ballSpeedY;
+        }  
+        if(ballY > canvas.height)
+        {
+             ballSpeedY = -ballSpeedY;
+        }
+            /* These speed increments the program go crazy!
+            ballSpeedY++;
+            ballSpeedX++;
+            */
+            
+           
+         }
+  
+  
+  
+  
+  //Drawing a rectangle method
+  function drawRectangle(xCor, yCor, width, height, color)
+  {
+    canvasContext.fillStyle = color;
+    canvasContext.fillRect(xCor,yCor,width, height);
+  }
+  
+  function drawBall(xCor, yCor, radius,color)
+  {
+      canvasContext.beginPath();
+      canvasContext.arc(xCor,yCor, radius, 0, 2*Math.PI, false);
+      canvasContext.fillStyle = color;
+      canvasContext.fill();  
+  }
+  
+  
+  
+  </script>
+  </head>
+  <body>
+  
+  <canvas width="800" height="600" id="gameCanvas" style="border: 1px solid black;">
+  </canvas>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    
+  </head>
+  <body>
+  <?php
+  $num=0;
+
+  
+  echo("<table border='1'>");
+  echo("<tr> <th>Number</th>");
+  echo("<th>Squared</th>");
+  echo("<th>Cubed</th> </tr>");
+  
+  while($num<=10)
+  {
+  echo("<tr> <td>");
+  echo($num);
+  echo ("</td>");
+  echo ("<td>" . $num*$num . "</td>");
+  echo ("<td>" . $num*$num*$num . "</td></tr>");
+  $num++
+  }
+  
+  echo ("</table");
+  
+  
+  
+  
+  
+  ?>
+  </body>
+</html>

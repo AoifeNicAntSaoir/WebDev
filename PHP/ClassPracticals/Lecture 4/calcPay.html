@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    
+  </head>
+  <body>
+  
+  <?php
+  
+  $worked = 5;
+  $rate = 10;
+  
+  function calcPay($worked,$rate) 
+  {
+    if($worked>=$60)
+      {
+      return echo "Your hours are capped to 60 hours ".($worked*60);
+      }
+    else
+      {
+      return (worked*rate);
+      }
+  }
+  
+  echo "The result is ". calcPay($worked,$rate);
+  
+  ?>
+
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Accordion</title>
+    <meta charset='utf-8'>
+  <script src="jquery-3.0.0.js"></script> 
+  <script type="text/javascript">
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+     $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+    $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+    });
+});
+  </script>
+  <style type="text/css"> 
+
+ #flip {
+    text-align: center;
+}
+#panel, #flip {
+    padding: 5px;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+#flip1 {
+    text-align: center;
+}
+#panel1, #flip1 {
+    padding: 5px;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel1 {
+    padding: 50px;
+    display: none;
+}
+#flip2 {
+    text-align: center;
+}
+#panel2, #flip2 {
+    padding: 5px;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel2 {
+    padding: 50px;
+    display: none;
+}
+
+#flip3 {
+    text-align: center;
+}
+#panel3, #flip3 {
+    padding: 5px;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel3 {
+    padding: 50px;
+    display: none;
+}
+  
+  </style>
+  </head>
+  <body>
+  
+   <div id="flip">Introduction To Programming</div>
+<div id="panel">
+    <ul>
+        <li>Keyboard input and screen output</li>
+        <li>Comments, variables, constants, operators and expressions</li>
+        <li> Simple calculations and conversions</li>
+        <li>Selection control structures</li>
+        <li>Repetition control structures</li>
+        <li>Problem-solving and algorithm development</li>
+    </ul>
+
+</div>
+ <div id="flip1">Object Oriented Programming 1</div>
+<div id="panel1">
+    <ul>
+        <li>Review of structured programming basics</li>
+        <li>GUI input and output</li>
+        <li>Methods</li>
+        <li>Input Validation Algorithms</li>
+        <li>Arrays</li>
+        <li>Simple GUI components</li>
+        <li>Using the API documentation</li>
+        <li>Introduction to user-defined classes</li>
+        <li>Documentation through UML</li>
+    </ul>
+</div>
+ <div id="flip2">Object Oriented Programming 2</div>
+<div id="panel2">
+    <ul>
+        <li>Fundamental OO</li>
+                <ul><li>Objects</li>
+                    <li>Classes</li>
+                    <li>Encapsulation</li>
+                    <li>Constructors</li>
+                    <li>Access & Mutator methods</li>
+                    <li>Class & Instance methods</li>
+                    <li>Overloading</li>
+                    <li>Composition.</li>
+                </ul>
+        <li>Testing
+                <ul>
+                    <li>JUnit Testing</li>
+                </ul>
+        </li>
+        <li>Event-Handling & API GUI classes
+                <ul><li>Including the basics of Inheritance & Interfaces.</li></ul>
+        </li>
+        <li>Documenting OO Systems
+            <ul>
+                <li>UML/Class Diagrams</li>
+                <li>Java Doc</li>
+                <li>Version Control - Github</li>
+            </ul>
+        </li>
+        <li>Data Structures and Persistence
+            <ul>
+                <li>Arrays, ArrayLists & LinkedLists from the Collection framework</li>
+                <li> Writing Data/Objects to persistent storage & reading them back</li>
+                <li>Exception Handling</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    <div id="flip3">Object Oriented Programming 3</div>
+<div id="panel3">
+    <ul>
+        <li>Inheritance, abstraction, interfaces and polymorphism</li>
+        <li>Classes from the collections framework	</li>
+        <li>Exception-handling</li>
+        <li>Generic Classes</li>
+        <li>Internet Networking</li>
+    </ul>
+
+</div>
+    
+
+  </body>
+</html>

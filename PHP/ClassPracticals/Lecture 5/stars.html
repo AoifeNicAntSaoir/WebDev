@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>css demo2</title>
+    <meta charset='utf-8'>
+   <style type="text/css">
+
+legend, #submit {
+
+  font-family: CuprumFFURegular, georgia, "times new roman", times, serif;
+
+  }
+
+fieldset {
+
+  margin-bottom: 10px;
+
+  position: relative;
+
+  padding: 2.5em 1em 1.5em 1em;
+
+  background: #b5c8e4;
+
+  }
+
+
+form {
+
+  background: #6a91ca;
+
+  padding: 10px;
+
+  margin: 0 50px 10px 50px;
+
+  -webkit-border-radius: 10px;
+
+  -moz-border-radius: 10px;
+
+  border-radius: 10px;
+
+  }
+
+input{
+
+  -webkit-border-radius: 5px;
+
+  -moz-border-radius: 5px;
+
+  border-radius: 5px;
+
+  font-size: 1em;
+
+  }
+
+input:focus {
+
+  background: #e3d5ba;
+
+  }
+
+legend span {
+
+  position: absolute;
+
+  left: 0;
+
+  font-size: 1.25em;
+
+  margin-top: 0.5em;
+
+  margin-left: 0.5em;
+
+  }
+
+#contactinfo,#submitbutton {
+
+  border: none;
+
+  }
+
+#contactinfo label {
+
+  display: block;
+
+  position: relative;
+
+  margin: 12px 0;
+
+  }
+
+#contactinfo input {
+
+  position: absolute;
+
+  left: 100px;
+
+  }
+
+
+#submit {
+
+  background: #e3d5ba;
+
+  font-size: 1.25em;
+
+  }
+
+#submitbutton {
+
+  border: none;
+  background: #6a91ca;
+  margin-top:20px;
+  padding: 0.5em 0 0 0;
+  text-align: center;
+
+  }
+
+</style>
+
+</head>
+
+<body>  
+
+<form action="stars.php" method="get">
+
+<fieldset id="contactinfo">
+
+            <legend><span>No of stars</span></legend>
+
+            <label for="num">
+
+              First Num:  
+
+              <input type="text" name="num" id="num" placeholder="num" >
+
+            </label>
+
+
+
+     <fieldset id="submitbutton">
+
+           <input type="submit" id="submit" value="Submit">
+
+
+
+    </fieldset>
+
+ </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+  </head>
+  <style type="text/css">
+    body{
+background:#d0d0d5;
+}
+ p { position: absolute;}
+
+/*  Basic stucture
+=====================*/
+#accordion{
+margin-left: 190px;
+position: absolute;
+width:400px;
+border-radius: 5px;
+}
+
+#accordion ul{
+list-style:none;
+margin:0;
+padding:0; 
+box-shadow:0 4px 10px #BDBDBD;
+border-radius:5px;
+}
+.accordion{
+display:none;
+}
+.accordion:target{
+display:block;   
+border-top:3px solid #00ac65;
+}
+#accordion ul li a{
+text-decoration: none;
+display:block;
+padding:10px; 
+background:#fff;
+border-bottom:1px solid #E0E0E0;
+color:#ccc;
+}
+.accordion{
+padding:4px; 
+background:#fdfdfd;
+color:#999;
+}
+
+  
+  
+  </style>
+  <body>
+  
+ <p> some shit alongside the accordion </p>
+ 
+      <div id="accordion">
+      <ul>
+        <li>
+          <a href="#introProg">Introduction to Programming</a>
+          <div id="introProg" class="accordion">
+              Keyboard input and screen output <br>
+              Comments, variables, constants, operators and expressions<br>
+              Simple calculations and conversions<br>
+              Selection control structures<br>
+              Repetition control structures<br>
+              Problem-solving and algorithm development<br>
+          </div>
+        </li>
+        <li>
+          <a href="#oop1">Object Oriented Programming 1</a>
+          <div id="oop1" class="accordion">
+              Review of structured programming basics<br>
+              GUI input and output              <br>
+              Methods <br>
+              Input Validation Algorithms     <br>
+              Arrays                           <br>
+              Simple GUI components<br>
+              Using the API documentation     <br>
+              Introduction to user-defined classes<br>
+              Documentation through UML      <br>
+          </div>
+        </li>    
+        <li>
+          <a href="#oop2">Object Oriented Programming 2</a>
+          <div id="oop2" class="accordion">
+            Fundamental Object Oriented Concepts <br>
+                Classes<br>
+                Objects<br>
+                Methods <br>
+                Encapsulation <br>
+                Constructors<br>
+                Access & Mutator Methods<br>
+                Class & Instance Methods<br>
+                Overloading & Overriding<br>
+                Composition/Aggregation  <br>
+                Inheritance      <br>
+                Interfaces       <br>
+            JUnit Testing<br>
+            Event Handling & API GUI Classes<br>
+            Documenting OO Systems - UML & Javadoc <br>
+            Version Control - Github             <br>
+            Data structures, Persistent storage & Handling exceptions<br>
+          </div>
+        </li>
+        <li>
+          <a href="#oop3">Object Oriented Programming 3</a>
+          <div id="oop3" class="accordion">
+            Inheritance<br>
+            Abstraction <br>
+            Interfaces <br>
+            Polymorphism<br>
+            Classes from the Java Collections Framework<br>
+            Exception-handling<br>
+            Generic Classes<br>
+            Internet Networking<br>
+          </div>
+        </li>
+        
+        
+      </ul>
+    </div>
+
+  </body>
+</html>
