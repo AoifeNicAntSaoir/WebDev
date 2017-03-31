@@ -7,12 +7,9 @@
   </head>
   <body>
   <?php
-  echo "<h1> Hello World</h1>";
-  echo "<h2> Aoife Sayers</h2>";
-  echo "Lack,<br> Inch, <br> Annascaul, <br> Co. Kerry.";
-  
-  
-  
+	  echo "<h1> Hello World</h1>";
+	  echo "<h2> Aoife Sayers</h2>";
+	  echo "Inch, <br> Annascaul, <br> Co. Kerry.";
   ?>
   </body>
 </html>

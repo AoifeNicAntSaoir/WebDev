@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+	  <script type="text/javascript">
+		function add(){
+			var num1 = parseFloat(document.calcForm.num1.value);
+			var num2 = parseFloat(document.calcForm.num2.value);
+			if(isNaN(num1)==true || isNaN(num2)==true){
+				  window.alert("Entry Invalid");
+			}
+			else{
+				  var result = num1 + "+" + num2 + "="  + (num1+num2);
+				  //alert(result);
+				  document.getElementById("calcResult").innerHTML = result;
+			}
+		}
+		
+		function subtract(){
+			var num1 = parseFloat(document.calcForm.num1.value);
+			var num2 = parseFloat(document.calcForm.num2.value);
+			if(isNaN(num1)==true || isNaN(num2)==true){
+				  window.alert("Entry Invalid");
+				  document.getElementById("no1").focus();
+			}
+			else{
+			var result = num1 + "-" + num2 + "="  + (num1-num2);
+			document.getElementById("calcResult").innerHTML = result;
+			}
+		}
+		
+		function multiply(){
+			var num1 = parseFloat(document.calcForm.num1.value);
+			var num2 = parseFloat(document.calcForm.num2.value);
+			if(isNaN(num1)==true || isNaN(num2)==true){
+				  window.alert("Entry Invalid");
+			}
+			else{
+				var result = num1 + "x" + num2 + "="  + (num1*num2);
+				//alert(result);
+				document.getElementById("calcResult").innerHTML = result;
+			 }
+		}
+		
+		function divide(){
+			var num1 = parseFloat(document.calcForm.num1.value);
+			var num2 = parseFloat(document.calcForm.num2.value);
+			if(isNaN(num1)==true || isNaN(num2)==true){
+				  window.alert("Entry Invalid");
+			}
+			else{
+				var result = num1 + "/" + num2 + "="  + (num1/num2);
+				document.getElementById("calcResult").innerHTML = result;
+			}
+		}
+		
+		function modulus(){
+			var num1 = parseFloat(document.calcForm.num1.value);
+			var num2 = parseFloat(document.calcForm.num2.value);
+			if(isNaN(num1)==true || isNaN(num2)==true){
+				  window.alert("Entry Invalid");
+			}
+			else {
+				  var result = num1 + "%" + num2 + "="  + (num1%num2);
+				  //alert(result);
+				  document.getElementById("calcResult").innerHTML = result;
+			}
+		}
+	  
+	  </script>
+  </head>
+  <body>       
+        <form name="calcForm" action="" method="get">
+              Number 1:<input type="text" name="num1" id="no1" placeholder="Number 1 goes here"> <br>
+              Number 2:<input type="text" name="num2" id="no2" placeholder="Number 2 goes here">
+               <br><br>
+              <input type="button" name="plusbtn" value="+" onclick="add()">
+              <input type="button" name="subtractbtn" value="-" onclick="subtract()" >
+              <input type="button" name="multiplybtn" value="x" onclick="multiply()">
+              <input type="button" name="dividebtn" value="/" onclick="divide()"> 
+              <input type="button" name="modulusbtn" value="%" onclick="modulus()">
+              
+               <br><textarea id="calcResult" name="mytextarea" rows="4" cols="20">    </textarea>
+             <button type="reset" value="Reset">Reset</button> 
+        </form>
+        
+   
+  </body>
+</html>

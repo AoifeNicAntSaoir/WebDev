@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+	
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+		var resultsList = new Array(5);
+      var j;
+      
+      for(j=0; j<resultsList.length; j++)
+      {
+          resultsList[j] = parseFloat(window.prompt("Enter result for student " + j));
+      }
+      var totalResults = 0;
+      var highestResult = 0;
+      var smallestResult = resultsList[0];
+      for(j=0; j<resultsList.length; j++)
+      {
+            document.writeln(resultsList[j] + "<br>");
+            totalResults += parseFloat(resultsList[j]);
+            if(resultsList[j]>highestResult)
+            {
+            highestResult = resultsList[j];
+            }
+            else if(resultsList[j]<smallestResult)
+            {
+            smallestResult = resultsList[j];
+            }
+      }
+      document.writeln("Total Results: " + totalResults + 
+                        "<br> Average Results " + (totalResults/resultsList.length) + 
+                        "<br> Highest Result: " + highestResult + 
+                        "<br> Smallest Result: " + smallestResult + "<br><br>");
+	</script>
+  </head>
+  <body>
+  
+    
+        
+  
+  </body>
+</html>

@@ -8,13 +8,8 @@
   <body>
   <?php
   $myNumber= 1234567.89;
-  
-  // Displays "1,234,568" 
-echo number_format($myNumber); 
-
-  
-  
-  
+	// Displays "1,234,568" 
+	echo number_format($myNumber); 	
   
   ?>
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+
+    <script type="text/javascript">                 
+		var binaryResult = "";
+		var octalResult = "";
+        var hexResult = "";
+		
+		function calcBinary(number) 
+		{
+		   if(parseInt(number)<0)
+		   {
+			   document.getElementById("binRes").innerHTML = "Error";
+			   document.getElementById("binRes").style = "background-color: red; color: white;  height: 100px; width: 500px; padding-top: 100px; text-align: center;";
+		   }
+		   else
+		   {
+				binaryResult = parseInt(number).toString(2);
+				octalResult = parseInt(number).toString(8);
+				hexResult = parseInt(number).toString(16).toUpperCase();
+			
+				document.getElementById("binRes").style = "background-color: yellow; height: 100px; width: 500px; padding-top: 100px; text-align: center;"
+				document.getElementById("binRes").innerHTML = number + " to binary is: " +  binaryResult + "<br>" + number + " to octal is: " + octalResult + "<br>" + number + " to hex is: " + hexResult;
+			}
+		}  
+    </script>
+  </head>
+  <body>
+	  <h1>Binary, Octal & Hexadecimal Calculator</h1>
+	  <form name="tablesForm" action="" method="get">
+			<h1>Calculate Binary</h1>
+			Insert decimal value:<input type="text" name="binNum"><br>
+			<input type="button" value="Calculate Binary" onclick="var newBinary = calcBinary(document.tablesForm.binNum.value);">     
+			<p id="binRes">   </p>
+	  </form>
+  </body>
+</html>

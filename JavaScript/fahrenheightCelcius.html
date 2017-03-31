@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  
+  <script type="text/javascript">
+     function convertToFahr(){
+     var celcius = parseFloat(document.tempConvForm.celcTxt.value);
+     if(isNaN(celcius)==true)
+        {
+			window.alert("Entry Invalid");
+        }
+     else
+        {
+			var result =  celcius.toFixed(2) +  " \u00B0" + "C being converted to Fahrenheit... \n\n" +(celcius * (9/5) + 32).toFixed(2) + "\u00B0F";
+			window.alert(result);
+        }
+    }
+    
+    function convertToCelc(){
+    var fahrenheight = parseFloat(document.tempConvForm.fahrTxt.value);
+    if(isNaN(fahrenheight)==true)
+        {
+			window.alert("Entry Invalid");
+        }
+     else
+        {
+			
+			var result =  fahrenheight.toFixed(2) + " \u00B0" + "F being converted to Celcius... \n\n" +  ((fahrenheight-32) * 5/9).toFixed(2) + "\u00B0C";
+			window.alert(result)
+			//document.getElementById("celcRes").innerHTML = "you clicked me " + result;
+        }
+    //document.getElementById("celcRes").innerHTML = "hi";
+    }
+
+  </script>
+  </head>
+  <body>
+    <form name="tempConvForm" action="" method="get">
+            Celcius <input type="text" name="celcTxt" placeholder = "Celcius"> <br><br>
+            <input type="submit" value="Convert to Fahrenheight" onclick="convertToFahr()">
+            
+           <br><br><br><br> Fahrenheit <input type="text" name="fahrTxt" placeholder = "Fahrenheight">    <br><br>
+           <input type="submit" value="Convert to Celcius" onclick="convertToCelc()"> 
+           <p id="celcRes">      </p>         
+     </form>
+  </body>
+</html>

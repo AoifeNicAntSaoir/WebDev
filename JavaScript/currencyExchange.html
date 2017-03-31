@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+	
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		function euroToSter()
+		{ 
+		  var sterling = 0.76;
+		  var money = document.currencyConverter.money.value;
+		  var res = parseFloat(money)*sterling;
+		  var result = "€"  + res.toFixed(2);
+		  document.currencyConverter.convRes.value = result; 
+		}
+		function sterToEuro()
+		{
+		  var euro = 1.31;
+		  var money = document.currencyConverter.money.value;
+		  var res = parseFloat(money)*euro;
+		  var result = "£"  + res.toFixed(2);
+		  document.currencyConverter.convRes.value = result; 
+		}
+	
+	</script>
+  </head>
+  <body>
+	<form name="currencyConverter" action="" method="get">
+		Money: <input type="text" name="money">
+		<input type="radio" name="converter" onchange="euroToSter()">Euro to Sterling <br>
+		<input type="radio" name="converter" onchange="sterToEuro()">Sterling to Euro  <br>
+        <textarea name= "convRes" rows="4" cols="50"> </textarea>
+	</form>
+		
+  
+    
+        
+  
+  </body>
+</html>

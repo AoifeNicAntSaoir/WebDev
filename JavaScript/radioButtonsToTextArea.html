@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  <!--CSS Styles!-->
+  <style type="text/css">
+  #demo
+  {
+  font-weight: italic;
+  }
+  
+  #werror:focus
+  {
+  background-color: red;
+  }
+  </style>
+  
+  <script type="text/javascript">
+  
+	  var veggie =  "The pizza is topped with juicy veg";
+	  var meaty = "The pizza is topped with ham other succulent meats";
+	  var pepper = "The pizza is topped with pepperoni and cheese";
+	  var hawaii = "The pizza is topped with ham and pineapple";
+
+  </script>
+  </head>
+  <body>
+          
+        <form name="pizzaForm" action = "" method = "GET">        
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=veggie">Vegetarian Pizza    <br>
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=meaty">Meat Pizza         <br>
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=pepper">Pepperoni Pizza     <br>
+              <input type="radio" name="pizzaRad" onclick="document.pizzaForm.descriparea.value=hawaii" >Hawaiian Pizza      <br>          
+        
+            <textarea id="descriparea" name="mytextarea" rows="4" cols="50">
+                
+            </textarea>
+        </form>
+        
+      
+  </body>
+</html>

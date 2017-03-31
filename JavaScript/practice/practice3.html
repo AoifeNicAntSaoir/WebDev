@@ -12,16 +12,16 @@
         return result = journ + "\r";
         
         } 
-  
+	
      function checkPass() {
      var password = document.confirmPassword.passwordBox.value;
    if(document.confirmPassword.passwordBox.value!= document.confirmPassword.passwordConf.value)
    {
-   alert("Passwords not the same");
-   document.confirmPassword.passwordBox.focus;
-   document.confirmPassword.passwordConf.value="";
-    }
-    if(password.length < 7)
+	   alert("Passwords not the same");
+	   document.confirmPassword.passwordBox.focus;
+	   document.confirmPassword.passwordConf.value="";
+   }
+    else if(password.length < 7)
     {
       alert("Password too short");
       document.confirmPassword.passwordBox.focus;

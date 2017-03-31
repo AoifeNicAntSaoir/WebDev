@@ -7,12 +7,9 @@
   </head>
   <body>
   <?php
-   echo "<h1>Hello World!</h1>";
-   echo "<h3>Name: </h3> Aoife Sayers";
-   echo "<h3>Age: </h3> 19";
-   
-  
-  
+	   echo "<h1>Hello World!</h1>";
+	   echo "<h3>Name: </h3> Aoife Sayers";
+	   echo "<h3>Age: </h3> 19";
   ?>
 
   </body>

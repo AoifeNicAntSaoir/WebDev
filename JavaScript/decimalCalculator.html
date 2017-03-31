@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+
+    <script type="text/javascript">
+	  
+	  var decimalResult = "";
+      
+		function calcDecimal(number)
+		{                                                                  
+			var num = parseInt(number);
+		  
+			if(!number.includes("0") || !number.includes("1") || num < 0)
+			{
+				document.getElementById("decRes").innerHTML = "invalid value - try again";
+				document.getElementById("decRes").style = "background-color: red; color: white;  height: 100px; width: 500px; padding-top: 100px; text-align: center;";
+			}
+			else
+			{
+				decimalResult = parseInt(num,2);
+				document.getElementById("decRes").innerHTML = number + " to decimal is: " + decimalResult;
+				document.getElementById("decRes").style = "background-color: yellow; color: black;  height: 100px; width: 500px; padding-top: 100px; text-align: center;";
+			}
+		}
+    </script>
+  </head>
+  <body>
+	  <form name="tablesForm" action="" method="get">		
+			<h1>Calculate Decimal</h1>
+			Insert binary value:<input type="text" name="decNum">      <br>
+			<input type="button" value = "Calculate Binary" onclick="var newDecimal = calcDecimal(document.tablesForm.decNum.value);">     
+			<p id="decRes">   </p>
+	  </form>
+      
+  </body>
+</html>

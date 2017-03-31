@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  <!--CSS Styles!-->
+
+  <script type="text/javascript">   
+    function calcBMI()
+    {
+        var weight = document.calculateBMI.weight.value;
+		var height = document.calculateBMI.height.value;
+        parseFloat(weight);
+        parseFloat(height);
+        if(weight == "" || weight <=0 || height == "" || height <= 0){
+			document.getElementById("werror").focus();
+			document.getElementById("herror").focus();
+			document.getElementById("error").innerHTML = "Error with weight / height";
+			alert("error");
+          }
+        else {
+			var result = (weight * 702) / (height * height);
+			document.getElementById("error").innerHTML = "Your BMI is " + result.toFixed(2);
+			alert(result.toFixed(2));
+        }  
+    }
+  </script>
+  </head>
+  <body>
+        <form name="calculateBMI" action="" method="get">
+              Weight:  <input type="text" name="weight" id="werror" placeholder="Weight (pounds)">  <br>
+              Height:  <input type="text" name="height" id="herror" placeholder="Height (inches)">  <br>
+              <p id="error">      </p>
+              <input type="submit" name="calculBMI" onclick="calcBMI()">
+        </form>                    
+  </body>
+</html>

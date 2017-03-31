@@ -18,5 +18,3 @@ echo 'This is  a Prime Number..';
 ?>  
 
 
-<?php  
-

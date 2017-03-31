@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+  <!--CSS Styles!-->
+  <style type="text/css">
+  #demo
+  {
+  font-weight: italic;
+  }
+  
+  #werror:focus
+  {
+  background-color: red;
+  }
+  </style>
+  
+  <script type="text/javascript">
+  res = ""
+    function calcPay(hours,pay){
+		var finalPay;
+		if(hours>60){
+			return 500;
+		}
+		res= hours*pay;
+		document.calculatePay.calcpayerror.value = "res";
+    }
+  
+  </script>
+  </head>
+  <body>
+        <!--passing up value into parameters!-->      
+        <form name="calculatePay" action="" method="get">
+              Hours Worked:  <input type="text" name="hours" id="hoursid" placeholder="Hours">  <br>
+              Minimum Wage:  <input type="text" name="pay" id="wageid" placeholder="Wage €">  <br>
+              <input type="text" name="calcpayerror"> 
+              <input type="submit" name="calculBMI" onclick="calcPay(parseInt(document.calculatePay.hours.value),parseInt(document.calculatePay.pay.value))">
+        </form>
+  </body>
+</html>
